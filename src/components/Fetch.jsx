@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-/* eslint-disable react-hooks/exhaustive-deps */
+
 import { useState, useEffect } from "react";
 import { Card } from "react-bootstrap";
 const Fetch = (props) => {
@@ -38,7 +38,11 @@ const Fetch = (props) => {
       <Card.Body>
         <Card.Title>{weatherFetch.Array[0].dt_txt}</Card.Title>
         <Card.Text>
-          {weatherFetch.Array[0].temp_min} - {weatherFetch.Array[0].temp_max}
+          <ul>
+            <li>{weatherFetch.Array[0].temp_min}°C - temperatura minima</li>
+            <li>{weatherFetch.Array[0].temp_max}°C - temperatura massima</li>
+          </ul>
+          {/* {weatherFetch.Array[0].temp_min} - {weatherFetch.Array[0].temp_max} */}
         </Card.Text>
       </Card.Body>
     </Card>
